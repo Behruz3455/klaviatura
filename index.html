@@ -95,6 +95,32 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
 integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
 crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.onkeydown = function (e) {
+        // disable F12 key
+        if (e.keyCode == 123) {
+            return false;
+        }
+
+        // disable I key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            return false;
+        }
+
+        // disable J key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+
+        // disable U key
+        if (e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+</script>
 </body>
 
 </html>    
